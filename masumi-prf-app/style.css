@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+
+/* 🌸 基本設定 */
+body {
+  background-color: #fff5f7;
+  font-family: 'Sawarabi Mincho', serif;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 2rem;
+  line-height: 1.9;
+}
+
+/* 🌸 コンテンツボックス */
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  border: 2px solid #fbb1bd;
+  box-shadow: 0 8px 20px rgba(248, 200, 220, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background: linear-gradient(135deg, #fef6f0, #f0f8ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.profile-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.name {
+  font-size: 28px;
+  color: #4f6f52;
+  margin-bottom: 12px;
+}
+
+.intro {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0 8px;
+  padding: 8px 16px;
+  background-color: #4f6f52;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+  background-color: #6c8f72;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* スキル３ */
+.accordion-header {
+  background-color: #4f6f52;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  width: 14%;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #6c8f72;
+}
+
+.accordion-content {
+  max-height: 0;
+  width: 40%;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #f0f8ff;
+  padding: 0 16px;
+  border-radius: 0 0 8px 8px;
+}
+
+.accordion-content ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+/* 🌸 見出し */
+h1,
+h2 {
+  color: #f78da7;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+/* 🌸 リスト */
+ul {
+  padding-left: 1.2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* 🌸 リンク */
+a {
+  color: #c06c84;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 🌸 ナビゲーションバー */
+.navbar {
+  background-color: #fbb1bd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0 0 1rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(240, 160, 170, 0.4);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 1.2rem;
+}
+
+.navbar a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #6e2f5d;
+}
+
+/* 🌸 花びらアニメーション */
+.petal {
+  position: fixed;
+  top: -30px;
+  width: 50px;
+  height: 50px;
+  background-image: url('images/sakura2.png');
+  /* ←ここを変更！ */
+  background-size: cover;
+  animation: fall linear infinite;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.leaf-decoration {
+  position: absolute;
+  top: 600px;
+  /* ← 数値を大きくすればもっと下に！ */
+  left: 550px;
+  /* ← 必要なら横位置も調整できるよ */
+  width: 80px;
+  opacity: 0.8;
+  z-index: 2;
+}
+
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+/*歯のアイコン*/
+.tooth-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fef6f0;
+  padding: 2px;
+}
+
+.animated-icon {
+  width: 200px;
+  height: 200px;
+  animation: floatIn 1s ease-out, sway 3s ease-in-out infinite;
+}
+
+/* ふわっと登場 */
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ゆらゆら揺れる */
+@keyframes sway {
+
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+
+  50% {
+    transform: rotate(8deg);
+  }
+}
+
+/* 自己紹介カード */
+.card-wrapper {
+  display: flex;
+  align-items: center;
+  /* 縦位置を中央に揃える */
+  gap: 24px;
+  /* カードとイラストの間隔 */
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  /* カードが広がるように */
+}
+
+.illustration img {
+  width: 160px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*ナビゲーションバー*/
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  /* ←ここが縦並びのポイント！ */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  margin-bottom: 12px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4f6f52;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  min-height: 800px;
+}
+
+.navbar a:hover {
+  background-color: #e6f0ea;
+}
